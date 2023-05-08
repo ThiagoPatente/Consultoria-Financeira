@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "1eb7bde4-e380-4f6e-8913-c41f13c2f47f",
+		"name": "API consultoria de crédito",
+		"description": "Api para consultar as melhores ofertas de crédito para um Cliente da Gosat.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27271887",
+		"_collection_link": "https://www.postman.com/security-astronaut-37657396/workspace/teste-api-gosat/collection/27271887-1eb7bde4-e380-4f6e-8913-c41f13c2f47f?action=share&creator=27271887&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "CPF",
+			"item": [
+				{
+					"name": "Consulta de crédito por cpf",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "cpf",
+									"value": "11111111111",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/consulta",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"consulta"
+							]
+						},
+						"description": "Consultar as melhores ofertas de crédito do cliente."
+					},
+					"response": [
+						{
+							"name": "Consulta de crédito por cpf",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"cpf\":\"11111111111\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/consulta",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"consulta"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 May 2023 18:13:54 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 May 2023 18:13:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"instituicaoFinanceira\": \"Financeira Assert\",\n        \"modalidadeCredito\": \"crédito pessoal\",\n        \"valorAPagar\": \"R$:4.612,68\",\n        \"valorSolicitado\": 3000,\n        \"taxaJuros\": \"3.65%\",\n        \"qntParcelas\": 12\n    },\n    {\n        \"instituicaoFinanceira\": \"Banco PingApp\",\n        \"modalidadeCredito\": \"crédito consignado\",\n        \"valorAPagar\": \"R$:13.251,72\",\n        \"valorSolicitado\": 10000,\n        \"taxaJuros\": \"1.18%\",\n        \"qntParcelas\": 24\n    },\n    {\n        \"instituicaoFinanceira\": \"Banco PingApp\",\n        \"modalidadeCredito\": \"crédito pessoal\",\n        \"valorAPagar\": \"R$:8.928,11\",\n        \"valorSolicitado\": 5000,\n        \"taxaJuros\": \"4.95%\",\n        \"qntParcelas\": 12\n    }\n]"
+						}
+					]
+				}
+			],
+			"description": "Está pasta representa o tipo Cliente da API"
+		}
+	]
+}
